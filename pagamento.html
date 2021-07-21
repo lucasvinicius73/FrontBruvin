@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- site metas -->
+<title>Bruvin Viagens</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">	
+<!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!-- style css -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- Responsive-->
+<link rel="stylesheet" href="css/responsive.css">
+<!-- fevicon -->
+<link rel="icon" href="images/favicon.png" type="image/gif" />
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<!-- Tweaks for older IEs-->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<!-- owl stylesheets --> 
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+</head>
+<body>
+  <script>
+    var registro = localStorage.getItem("storage");
+
+    var parse = JSON.parse(registro);
+    var obj = JSON.parse(parse);
+  </script>
+	<!-- header section start -->
+	<div class="header_section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-lg-3">
+					<div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+				</div>
+				<div class="col-sm-6">
+					<nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        
+                    </div>
+                    </nav>
+				</div>
+				<div class="col-sm-6 col-lg-3">
+					<div class="search_main">
+                    <button class="submit_bt"><a href="index.html"><span class="doctor"><img src="images/passagem.png"></span>Passagens</a></button>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- header section end -->
+	<!-- banner section start -->
+	<div class="layout_padding banner_section">
+		<div class="container">
+			<div class="search_box_pag">
+				<div class="row">
+					<form  autocomplete="off" novalidate>
+                       <!-- <fieldset>
+                          <label>Item selecionado</label><br>
+                          <label>obj.origem</label><br>
+                        </fieldset>-->
+                        <fieldset>
+                          <label for="card-number">Número do cartão:</label><br> 
+                          <input type="num" id="card-number" class="email_boton_pag" maxlength="4" />
+                          <input type="num" id="card-number-1" class="email_boton_pag" maxlength="4" />
+                          <input type="num" id="card-number-2" class="email_boton_pag" maxlength="4" />
+                          <input type="num" id="card-number-3" class="email_boton_pag" maxlength="4" />
+                        </fieldset>
+                        <fieldset>
+                          <label for="card-holder">Titular do Cartão:</label><br>
+                          <input type="text" id="card-holder" class="email_boton_pag_nome"/>
+                        </fieldset>
+
+                        <fieldset class="fieldset-ccv">
+                          <label for="card-ccv">CVC:</label>
+                          <input type="text" id="card-ccv" class="cvv" maxlength="3"/>
+                          <span style="display:inline-block; width: 35%;"></span>
+                          <label>Data de Vencimento:</label>
+                          <select id="card-expiration-month">
+                            <option></option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                          </select>
+                          <select id="card-expiration-year">
+                            <option></option>
+                            <option>2021</option>
+                            <option>2022</option>
+                            <option>2023</option>
+                            <option>2024</option>
+                            <option>2025</option>
+                            <option>2026</option>
+                            <option>2027</option>
+                            <option>2028</option>
+                            <option>2029</option>
+                            <option>2030</option>
+                          </select>
+                        </fieldset>
+                        <button class="search_bt">Finalizar Compra</button>
+                      </form>
+                    </div>
+						
+						
+					
+					
+					 
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- banner section end -->
+	<!-- search box start -->
+	
+	<!-- search box end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+	  <script src="js/script.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script>
+         $(document).ready(function(){
+         $(".fancybox").fancybox({
+         openEffect: "none",
+         closeEffect: "none"
+         });
+         
+         $(".zoom").hover(function(){
+         
+         $(this).addClass('transition');
+         }, function(){
+         
+         $(this).removeClass('transition');
+         });
+         });
+         
+      </script>
+	  
+    
+</body>
+</html>

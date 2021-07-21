@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- site metas -->
+<title>Bruvin Viagens</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">	
+<!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!-- style css -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- Responsive-->
+<link rel="stylesheet" href="css/responsive.css">
+<!-- fevicon -->
+<link rel="icon" href="images/favicon.png" type="image/gif" />
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<!-- Tweaks for older IEs-->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<!-- owl stylesheets --> 
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+</head>
+<body>
+	<!-- header section start -->
+	<div class="header_section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-lg-3">
+					<div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+				</div>
+				<div class="col-sm-6">
+					<nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        
+                    </div>
+                    </nav>
+				</div>
+				<div class="col-sm-6 col-lg-3">
+					<div class="search_main">
+                    <button class="submit_bt"><a href="hospedagem.html"><span class="doctor"><img src="images/hotel.png"></span>Hospedagem</a></button>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- header section end -->
+	<!-- banner section start -->
+	<div class="layout_padding banner_section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="banner_taital">Compre sua passagem aqui!</h1>
+					<p class="browse_text">Os melhores destinos para a sua viagem</p>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="search_box">
+				<div class="row">
+					<form id="pass" method="GET">
+						<input id="orig" type="text" class="email_boton" placeholder="Origem" name="orig">
+					
+						<input id="dest" type="text" class="email_boton" placeholder="Destino" name="dest">
+						
+						<label class="espa">Ida:</label>
+						<input id="ida" type="date" class="email_boton" placeholder="Ida" name="ida">
+						
+						<label class="espa">Volta:</label>
+						<input id="volta" type="date" class="email_boton" placeholder="Volta" name="volta">
+					
+						<input type="number" class="email_boton" placeholder="Passageiros" name="Email">
+				
+						<label class="espa">Ida e Volta:</label>
+						<input id="iev" type="radio" class="check" placeholder="Ida e volta" name="iev">
+					
+						<label>Somente Ida:</label>
+						<input id="soid" type="radio" class="check" value="ida" name="soid">
+						
+					</form>
+					<button id="busca_pass" type="submit" class="search_bt" onclick="getTickets()" >Buscar</button>
+					
+					<table id="tabe" class="tab" border="1">
+						<thead>
+							<th>Origem</th>
+							<th>Destino</th>
+							<th>Dia</th>
+							<th>Preço</th>
+							
+						</thead>
+						<tbody id="tbody">
+							
+						</tbody>
+					</table>
+					<button id="visualizarDados" class="compra_bt">Comprar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- banner section end -->
+	<!-- search box start -->
+	
+	<!-- search box end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+	  <script src="js/script.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script>
+         $(document).ready(function(){
+         $(".fancybox").fancybox({
+         openEffect: "none",
+         closeEffect: "none"
+         });
+         
+         $(".zoom").hover(function(){
+         
+         $(this).addClass('transition');
+         }, function(){
+         
+         $(this).removeClass('transition');
+         });
+         });
+         
+      </script> 
+    
+</body>
+</html>
