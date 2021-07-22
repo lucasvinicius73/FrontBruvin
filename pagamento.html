@@ -37,6 +37,8 @@
 
     var parse = JSON.parse(registro);
     var obj = JSON.parse(parse);
+    var item = document.getElementById("item");
+    item.innerHTML = obj.orig;
   </script>
 	<!-- header section start -->
 	<div class="header_section">
@@ -70,10 +72,29 @@
 			<div class="search_box_pag">
 				<div class="row">
 					<form  autocomplete="off" novalidate>
-                       <!-- <fieldset>
+                       <fieldset>
                           <label>Item selecionado</label><br>
-                          <label>obj.origem</label><br>
-                        </fieldset>-->
+                          <label><span id="item"></span></label><br>
+                        </fieldset>
+                        <fieldset>
+                          <label">Parcelas:</label>
+                          <select id="parcel">
+                            <option></option>
+                            <option>01x</option>
+                            <option>02x</option>
+                            <option>03x</option>
+                            <option>04x</option>
+                            <option>05x</option>
+                            <option>06x</option>
+                            <option>07x</option>
+                            <option>08x</option>
+                            <option>09x</option>
+                            <option>10x</option>
+                            <option>11x</option>
+                            <option>12x</option>
+                          </select>
+                          <label>&emsp;&emsp;&emsp; Valor da Parcela: <span id="val"></span></label>
+                        </fieldset>
                         <fieldset>
                           <label for="card-number">Número do cartão:</label><br> 
                           <input type="num" id="card-number" class="email_boton_pag" maxlength="4" />
@@ -87,11 +108,11 @@
                         </fieldset>
 
                         <fieldset class="fieldset-ccv">
-                          <label for="card-ccv">CVC:</label>
+                          <label for="card-ccv">CCV:</label>
                           <input type="text" id="card-ccv" class="cvv" maxlength="3"/>
                           <span style="display:inline-block; width: 35%;"></span>
                           <label>Data de Vencimento:</label>
-                          <select id="card-expiration-month">
+                          <select>
                             <option></option>
                             <option>01</option>
                             <option>02</option>
@@ -106,7 +127,7 @@
                             <option>11</option>
                             <option>12</option>
                           </select>
-                          <select id="card-expiration-year">
+                          <select>
                             <option></option>
                             <option>2021</option>
                             <option>2022</option>
@@ -123,11 +144,6 @@
                         <button class="search_bt">Finalizar Compra</button>
                       </form>
                     </div>
-						
-						
-					
-					
-					 
 				</div>
 			</div>
 		</div>
@@ -138,33 +154,13 @@
 	<!-- search box end -->
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/plugin.js"></script>
-	  <script src="js/script.js"></script>
-      <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
-      <!-- javascript --> 
-      <script src="js/owl.carousel.js"></script>
-      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+	    <script src="js/script.js"></script>
       <script>
-         $(document).ready(function(){
-         $(".fancybox").fancybox({
-         openEffect: "none",
-         closeEffect: "none"
-         });
-         
-         $(".zoom").hover(function(){
-         
-         $(this).addClass('transition');
-         }, function(){
-         
-         $(this).removeClass('transition');
-         });
-         });
-         
+        var parcel = document.getElementById("parcel");
+        parcel.addEventListener("select",function(){
+          val.innerHTML = obj.price;
+        });
       </script>
 	  
     

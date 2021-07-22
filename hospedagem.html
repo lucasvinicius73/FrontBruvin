@@ -73,23 +73,34 @@
 			<div class="search_box">
 				<div class="row">
 					<form action="">
-						<input type="text" class="email_boton" placeholder="Cidade ou Hotel" name="Email">
+						<input id="cid" type="text" class="email_boton" placeholder="Cidade ou Hotel" name="Email">
 						
 						<label class="espa">Check-In:</label>
-						<input type="date" class="email_boton" name="Email">
+						<input id="chk_in" type="date" class="email_boton" name="Email">
 						
 						<label class="espa">Check-Out:</label>
-						<input type="date" class="email_boton" placeholder="Saída" name="Email">
+						<input id="chk_out" type="date" class="email_boton" name="Email">
 					
-						<input type="number" class="email_boton" placeholder="Hóspedes" name="Email">
-						<input type="number" class="email_boton" placeholder="Quartos" name="Email">
+						<input id="hos" type="number" class="email_boton" placeholder="Hóspedes" name="Email">
+						<input id="quar" type="number" class="email_boton" placeholder="Quartos" name="Email">
 			
 						<button class="search_bt">Buscar</button>
 					</form>
-						
+
+					<table id="tabe" class="tab" border="1">
+						<thead>
+							<th>Origem</th>
+							<th>Destino</th>
+							<th>Dia</th>
+							<th>Preço</th>
+							
+						</thead>
+						<tbody id="tbody">
+							
+						</tbody>
+					</table>
+					<button id="visualizarDados" class="compra_bt">Comprar</button>	
 					
-					
-					 
 				</div>
 			</div>
 		</div>

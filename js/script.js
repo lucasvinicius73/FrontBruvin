@@ -8,7 +8,12 @@ var soid = document.getElementById("soid");
 var tbody = document.getElementById("tbody");
 var tabela = document.getElementById("tabe");
 var linha = tabela.getElementsByTagName("tr");
-
+var passag = document.getElementById("passag");
+var cid = document.getElementById("cid");
+var chk_in = document.getElementById("chk_in");
+var chk_out = document.getElementById("chk_out");
+var hos = document.getElementById("hos");
+var quar = document.getElementById("quar");
 
 function getTickets() {
     
@@ -22,10 +27,6 @@ function getTickets() {
             for (let index = 0; index < data.length; index++) {
                 
                 var tr = tbody.insertRow();
-                console.log(data[index]["origin"]);
-                console.log(data[index]["destination"]);
-                console.log(data[index]["date"]);
-                console.log(data[index]["price"]);
                 
                 var td_orig = tr.insertCell(); 
                 var td_desti = tr.insertCell();
@@ -35,7 +36,40 @@ function getTickets() {
                 td_orig.innerText = data[index]["origin"];
                 td_desti.innerText = data[index]["destination"];
                 td_date.innerText = data[index]["date"];
-                td_price.innerText = data[index]["price"];
+                td_price.innerText = data[index]["price"]*hos;
+            }
+            for(var i=0;i<linha.length;i++){
+                var lin = linha[i];
+                lin.addEventListener("click",function(){
+                    selLinha(this,false);
+                })
+            }
+        }
+    })
+}
+
+function getHosting() {
+    
+    var urlstr = "http://localhost:3000/hosting/"+orig.value+"/"+ida.value;
+    
+    $.ajax({
+        url : urlstr,
+        type : "GET",
+        dataType : "json",
+        success : function(data){
+            for (let index = 0; index < data.length; index++) {
+                
+                var tr = tbody.insertRow();
+                
+                var td_orig = tr.insertCell(); 
+                var td_desti = tr.insertCell();
+                var td_date = tr.insertCell();
+                var td_price = tr.insertCell();
+                
+                td_orig.innerText = data[index]["origin"];
+                td_desti.innerText = data[index]["destination"];
+                td_date.innerText = data[index]["date"];
+                td_price.innerText = data[index]["price"]*hos;
             }
             for(var i=0;i<linha.length;i++){
                 var lin = linha[i];
